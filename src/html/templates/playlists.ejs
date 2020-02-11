@@ -1,0 +1,73 @@
+<%- include('../partials/head_start') %>
+    <link rel="stylesheet" href="/assets/css/playlists.css">
+
+    <title>iPlayMusic | Playlists</title>
+<%- include('../partials/head_end') %>
+
+    <%- include('../partials/spinner') %>
+
+    <div id="header_fixed">
+        <%- include('../partials/header_start') %>
+            Playlists
+        <%- include('../partials/header_end') %>
+    </div>
+    
+
+    <main>
+        <section class="banner" style="background-image: url('/assets/img/soundwave.png');">
+            <section class="">
+                <h1>Playlists</h1>
+            </section>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slides here -->
+
+                </div>
+            </div>
+            <h2 class="playlist-title"></h2>
+        </section>
+
+        <section class="all-songs">
+            <ul class="item-list">
+                <!-- Items here -->
+                
+            </ul>
+        </section>
+
+        <button class="border-button">Listen All</button>
+    </main>    
+
+
+    <div id="lower-menu_wave">
+        <%- include('../partials/lower-menu') %>
+    </div>
+
+    <template id="template-item">
+        <li class="item">
+            <a href="" class="item-link">
+                <article class="item-inner">
+                    <div class="item-icon" style="background-image: url('/assets/img/button_play.png');"></div>
+                    <section class="item-details">
+                        <h3 class="item-title"></h3>
+                        <p class="item-subtitle"></p>
+                    </section>
+                    <section class="item-songs">
+                        <p class="item-length"></p>
+                    </section>
+                </article>
+            </a>
+        </li>
+    </template>
+
+    <template id="template-slide">
+        <div class="swiper-slide"><div class="swiper-slide-image"></div></div>
+    </template>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <script src="/assets/js/playlists.js"></script>
+
+
+<%- include('../partials/body_end') %>

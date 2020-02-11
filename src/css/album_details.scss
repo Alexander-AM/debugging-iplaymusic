@@ -1,0 +1,126 @@
+@import "base";
+@import "lower-menu";
+@import "header";
+
+.heads {
+    justify-content: space-between;
+    display: flex;
+}
+
+.head-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding-top: 110vw;
+}
+
+.banner {
+    width: 100%;
+    height: 110vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 75px 25px 35px 25px;
+    background-size: cover;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    box-sizing: border-box;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .item-list {
+        display: flex;
+        margin-top: 20px;
+        overflow: scroll;
+        position: relative;
+        padding: 0 25px;
+        left: -25px;
+        width: 100vw;
+        box-sizing: border-box;
+
+        .item {
+            flex-shrink: 0;
+            padding: 10px;
+            background-color: $link-colour;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-right: 10px;
+        }
+
+        &::after {
+            content: "";
+            width: 15px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+    }
+}
+
+.all-songs {
+    .item {
+        height: 50px;
+        margin: 20px 0;
+
+        .item-link {
+            color: white;
+            font-size: 0.75rem;
+        }
+
+        .item-inner  {
+            display: flex;
+            align-items: center;
+
+            .item-icon {
+                width: 50px;
+                height: 50px;
+                background-size: cover;
+                border-radius: 4px;
+            }
+
+            .item-details {
+                margin: 0 20px;
+                flex: 1;
+                overflow: hidden;
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .item-title {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+
+            .item-songs {
+                justify-self: flex-end;
+            }
+        }
+    }
+}
+
+.light-theme {
+    .banner {
+        color: white;
+    }
+
+    .all-songs .item .item-link {
+        color: black;
+    }
+}

@@ -1,0 +1,67 @@
+<%- include('../partials/head_start') %>
+    <link rel="stylesheet" href="/assets/css/album_details.css">
+
+    <title>iPlayMusic | Album Details</title>
+<%- include('../partials/head_end') %>
+
+    <%- include('../partials/spinner') %>
+
+    <%- include('../partials/header_start') %>
+        Album
+    <%- include('../partials/header_end') %>
+    
+
+    <main>
+        <section class="banner" style="background-image: url('/assets/img/pexels-photo-03.png');">
+            <section>
+                <h1 class="banner-title"></h1>
+                <p class="head-name banner-songs"></p>
+            </section>
+            <section>
+                <p>genres hashtags</p>
+                <ul class="item-list banner-tags">
+                    <!-- Items here -->
+                </ul>
+            </section>
+        </section>
+
+        <section class="all-songs">
+            <section class="heads">
+                <p class="head-name">All Songs</p>
+            </section>
+            <ul class="item-list">
+                <!-- Items here -->
+            </ul>
+        </section>
+    </main>    
+
+
+    <div id="lower-menu_wave">
+        <%- include('../partials/lower-menu') %>
+    </div>
+
+    <template id="template-item">
+        <li class="item">
+            <a href="" class="item-link">
+                <article class="item-inner">
+                    <div class="item-icon" style="background-image: url('/assets/img/button_play.png');"></div>
+                    <section class="item-details">
+                        <h3 class="item-title"></h3>
+                        <p class="item-subtitle"></p>
+                    </section>
+                    <section class="item-songs">
+                        <p class="item-length"></p>
+                    </section>
+                </article>
+            </a>
+        </li>
+    </template>
+
+    <template id="template-genre-item">
+        <li class="item"></li>
+    </template>
+
+    
+    <script src="/assets/js/album_details.js"></script>
+
+<%- include('../partials/body_end') %>
