@@ -1,4 +1,4 @@
-const guⅼp = require("gulp");
+const gulp = require("gulp");
 const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
 const connect = require("gulp-connect");

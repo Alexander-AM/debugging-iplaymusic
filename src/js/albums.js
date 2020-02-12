@@ -103,7 +103,7 @@ function showData() {
             const albumElement = templateItemDom.content.cloneNode(true);
             albumElement.querySelector(".item-title").textContent = albumItems[i].name;
 
-            le artistsThis = "";
+            artistsThis = "";
             for(let n = 0; n < albumItems[i].artists.length; n++) {
                 artistsThis += albumItems[i].artists[n].name;
 

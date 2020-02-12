@@ -3,7 +3,7 @@
 @import "header";
 @import url("https://unpkg.com/swiper/css/swiper.min.css");
 
-.heads
+.heads {
     justify-content: space-between;
     display: flex;
 
@@ -93,6 +93,7 @@
             }
 
         }
+    }
 
     .item-link {
         color: white;
