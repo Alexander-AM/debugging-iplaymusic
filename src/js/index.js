@@ -68,7 +68,7 @@ function showData() {
         observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if(entry.target.getAttribute("data-loaded") !== true && entry.isIntersecting) {
-                    entry.target.setAttribute(`data-loaded", "true");
+                    entry.target.setAttribute("data-loaded", "true");
                     entry.target.querySelector(".featured-item").style = `background-image: url("${entry.target.getAttribute("data-src")}");`;
                 }
             });

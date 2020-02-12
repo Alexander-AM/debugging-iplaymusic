@@ -2,7 +2,7 @@ let authToken;
 
 let params = new URLSearchParams(window.location.search);
 
-console.log(dataPlaylists);
+//console.log(dataPlaylists);
 
 // Data
 let dataPlaylists;
@@ -18,7 +18,7 @@ const templateItemDom = document.getElementById("template-item");
 const templateGenreItemDom = document.getElementById("template-genre-item");
 
 // Fetch shorthand function
-async function fetchdata(resource) {
+async function fetchData(resource) {
     return await fetch("https://api.spotify.com/v1/" + resource, {
         headers: {
             Authorization: "Bearer " + authToken
@@ -30,7 +30,7 @@ async function fetchdata(resource) {
 // Authentication
 if((authToken = sessionStorage.getItem("spotify-token"))) {
     fetchData("browse/featured-playlists?country=SE&limit=1").then(function(data) {
-        if(dat.error) {
+        if(data.error) {
             console.log(data);
             authenticateClient();
         } else {

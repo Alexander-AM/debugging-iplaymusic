@@ -1,4 +1,4 @@
-const authToken;
+let authToken;
 
 let swiper;
 
@@ -69,7 +69,7 @@ function showData() {
         const playlistItems = playlists.playlists.items;
 
         swiperWrapperDom.innerHTML = "";
-        dataTracks = 0;
+        dataTracks = [];
         
         for(let i = 0; i < playlistItems.length; i++) {
             const playlistElement = templateSlideDom.content.cloneNode(true);
